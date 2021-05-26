@@ -14,7 +14,8 @@ const App = (): JSX.Element => {
         <GlobalStyles />
         <Header />
         <Routes />
-        <ToastContainer autoClose={3000} />
+        {/* change position to avoid cart icon get covered by toast */}
+        <ToastContainer autoClose={3000} position='top-center' />
       </CartProvider>
     </BrowserRouter>
   );

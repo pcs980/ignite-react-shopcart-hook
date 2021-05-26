@@ -13,7 +13,27 @@ export const Container = styled.div`
     align-items: center;
 
     button {
-      background: #7159c1;
+      &:first-of-type {
+        background: #7159c1;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        padding: 12px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background 0.2s;
+
+        &:hover {
+          background: ${darken(0.06, '#7159c1')};
+        }
+
+        &:disabled {
+          background: ${lighten(0.25, '#7159c1')};
+          cursor: not-allowed;
+        }
+      }
+
+      background: #D14548;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -23,7 +43,12 @@ export const Container = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.06, '#7159c1')};
+        background: ${darken(0.06, '#D14548')};
+      }
+
+      &:disabled {
+        background: ${lighten(0.25, '#D14548')};
+        cursor: not-allowed;
       }
     }
   }
